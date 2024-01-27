@@ -8,14 +8,14 @@ const BookingForm = ({
 }) => {
   const minimumDate = new Date().toISOString().split('T')[0];
   const defaultTime = availableTimes[0];
-  const minimumNumberOfGuests = 1;
-  const maximumNumberOfGuests = 10;
+  const minimumNumberOfGuests = 10;
+  const maximumNumberOfGuests = 12;
   const occasions = ['Birthday', 'Anniversary'];
   const invalidDateErrorMessage = 'Please choose a valid date';
   const invalidTimeErrorMessage = 'Please choose a valid time';
   const invalidOccasionErrorMessage = 'Please choose a valid occasion';
   const invalidNumberOfGuestsErrorMessage = 
-    'Please enter a number between 1 and 10';
+    'Please enter a number between 10 and 12';
 
   const [date, setDate] = useState(minimumDate);
   const [time, setTime] = useState(defaultTime);
